@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><!--默认的背景为闪屏-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.jiyoutang.dailyup.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_splash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@mipmap/splash"
+        android:scaleType="centerCrop" />
+    <!--配置服务器闪屏用的imageview-->
+    <!--显示几秒后进入app-->
+
+</LinearLayout>

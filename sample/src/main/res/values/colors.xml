@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_048C47">#048C47</color>
+    <color name="c_00000000">#00000000</color>
+    <color name="tab_text_color">#666666</color>
+    <color name="app_background_color">#f5f4f0</color>
+    <color name="titleAndButton_background_color">#00b459</color>
+    <color name="tag_green">#00B359</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="sky_blue">#00a0e0</color>
+    <color name="white">#FFF</color>
+    <color name="white_light">#98d7b0</color>
+    <color name="black">#000</color>
+    <color name="red">#FFC93437</color>
+    <color name="red2">#fb505c</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="grey_light">#e6e6e6</color>
+    <color name="gray">#555555</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+    <color name="silver_blue">#DCE7E9</color>
+    <color name="light_silver">#d4d4d2</color>
+    <color name="cpb_grey">#ffdedede</color>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_red_dark">#ffcd3a3a</color>
+    <color name="cpb_green">#ff99cc00</color>
+    <color name="cpb_green_dark">#ff6d9b00</color>
+    <color name="so_light">#F3F3F3</color>
+    <color name="little_light">#e5e5e5</color>
+    <color name="border_gray_color">#d7d7d7</color>
+    <color name="orange">#ff7c51</color>
+    <color name="orange_gold">#feb65b</color>
+    <color name="light_orange">#ffc9b7</color>
+    <color name="so_light_orange">#fff6f3</color>
+    <color name="title_gray">#4a4a4a</color>
+    <color name="content_gray">#585858</color>
+    <color name="cpb_white">@android:color/white</color>
+    <color name="rippelColor">#0099CC</color>
+    <color name="branch_title_bg_blue">#3E97F2</color>
+    <color name="branch_title_bg_orange">#F39826</color>
+    <color name="black_light">#333333</color>
+    <color name="gray_deep">#999999</color>
+    <color name="yellow_btn">#F3B353</color>
+    <color name="yellow_btn_on">#E5A03B</color>
+    <color name="title_color">#fe7477</color>
+    <color name="normal_gray_text">#868686</color>
+    <color name="line_background">#D4D4D4</color>
+
+    <color name="tabtext_color">#e5a59c</color>
+    <color name="tabnottext_color">#959595</color>
+    <!--首页-->
+    <color name="color_huise_mainmenu">#F2F2F2</color>
+    <color name="color_9c9c9c">#9c9c9c</color>
+
+    <color name="set_text_bg">#4398f9</color>
+    <color name="text_bg">#b0d2f7</color>
+
+    <color name="search_text_bg">#999</color>
+    <color name="title_green">#00b459</color>
+    <color name="title_green_pressed">#00994c</color>
+    <color name="title_color_333333">#333</color>
+    <color name="title_color_666666">#666</color>
+    <color name="title_color_edece7">#edece7</color>
+    <color name="color_f6f4f0">#f6f4f0</color>
+    <color name="color_6897c60">#6897c6</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_gray_drak">#faf9f5</color>
+    <color name="color_yelow_text">#edeae5</color>
+    <color name="color_gray_bg">#ed6d50</color>
+
+    <color name="color_set_hint">#cccccc</color>
+    <color name="color_set_text">#000000</color>
+    <color name="color_set_btn">#000000</color>
+    <color name="color_set_linearlayout">#ffffff</color>
+    <color name="transpant">#00000000</color>
+
+    <color name="color_e4e4e4">#e4e4e4</color>
+    <color name="color_45b466">#45b466</color>
+    <color name="list_item_bg_pressed">#ebf3f6</color>
+
+    <color name="click_layout_bg">#dfdede</color>
+    <color name="click_button_bg">#39a44f</color>
+    <color name="click_login_bg">#afceb5</color>
+    <color name="head_line">#d4d2cc</color>
+    <color name="search_gridview_out">#d8d8d8</color>
+
+    <color name="color_no_focuse">#7bd4a4</color>
+    <color name="color_no_focuse_text">#bee4cf</color>
+    <color name="color_divider_eaeaea">#eaeaea</color>
+    <color name="color_divider_dadada">#dadada</color>
+    <color name="color_menu_list">#ebeae8</color>
+    <color name="subcribe_btn_default">#CCCCCC</color>
+    <color name="deep_toast_field_bg">#90000000</color>
+
+    <color name="teacher_ranks_red">#f37454</color>
+    <color name="teacher_ranks_blue">#6897c3</color>
+    <color name="teacher_ranks_green">#57bb73</color>
+    <color name="teacher_ranks_yellow">#fcc230</color>
+    <color name="deep_video_field_bg">#60000000</color>
+    <color name="deep_toast_bg">#90000000</color>
+    <color name="video_field_bg">#50000000</color>
+    <color name="load_text">#999</color>
+    <color name="tab_color">#F8F8F7</color>
+    <color name="tab_top_divider_color">#CDCBC5</color>
+    <color name="search_circle_unpressed_color">#0c8a4a</color>
+    <color name="divider_subscribe_color">#E9E8E6</color>
+    <color name="bg_color_gaoji">#986aeb</color>
+    <color name="bg_color_teji">#fe6b36</color>
+    <color name="bg_color_erji">#5cb3f6</color>
+    <color name="bg_color_yiji">#f3b92d</color>
+
+    <color name="tag_text_red">#fc6a4e</color>
+    <color name="tag_text_violet">#986aeb</color>
+    <color name="tag_text_blue">#54a7e6</color>
+    <color name="tag_border_red">#30ff9c89</color>
+    <color name="tag_border_violet">#30bd9bfb</color>
+    <color name="tag_border_blue">#3054aaec</color>
+
+    <color name="channel_divider_color">#EBE8E4</color>
+
+
+    <!--xutils3-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_aidl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定service进行aidl通信" />
+
+    <Button
+        android:id="@+id/btn_aidl_unbind"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="解绑" />
+
+
+    <Button
+        android:id="@+id/btn_date_bind"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定获取aidl" />
+
+    <Button
+        android:id="@+id/btn_get_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="获取时间" />
+
+    <Button
+        android:id="@+id/btn_date_unbind"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="aidl解绑" />
+
+
+</LinearLayout>
