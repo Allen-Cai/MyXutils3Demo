@@ -68,7 +68,7 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     compile project(':xutils')
     compile project(':AVLoadingIndicatorView')
-    compile project(':ImageSliderLibrary')
+    compile project(':SliderLibrary')
     compile 'com.alibaba:fastjson:1.2.7'
     compile files('libs/BaiduLBS_Android.jar')
 }
