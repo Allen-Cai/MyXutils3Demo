@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.baidu.location.BDLocation;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.yhcdhp.cai.BaseFragment;
 import com.yhcdhp.cai.R;
 import com.yhcdhp.cai.daydays.adapter.CityAdapter;
@@ -32,6 +35,7 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -57,12 +61,28 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
 
     private BaiduLocationUtils mBaiduLocationUtils;
 
+    @ViewInject(R.id.SliderLayout)
+    private SliderLayout mSliderLayout;
+
+//    @ViewInject(R.id.custom_indicator)
+//    private PagerIndicator custom_indicator;//自定义的指示器
+
+
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Log.i(TAG, "onCreateView_1");
 //        View view = inflater.inflate(R.layout.fragment_one, null);
 //        return view;
 //    }
+
+    private String[] urls = {
+            "http://f.hiphotos.baidu.com/zhidao/pic/item/a9d3fd1f4134970aed3ef2a594cad1c8a6865def.jpg",
+            "http://d.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=603e37439313b07ebde8580c39e7bd15/a8014c086e061d9591b7875a7bf40ad163d9cadb.jpg",
+            "http://b.hiphotos.baidu.com/zhidao/pic/item/63d9f2d3572c11dfb068871a612762d0f703c249.jpg",
+            "http://img.hb.aicdn.com/d2024a8a998c8d3e4ba842e40223c23dfe1026c8bbf3-OudiPA_fw580"
+    };
+
+    private HashMap<String, String> map = new HashMap<>();
 
 
     @Override
@@ -76,6 +96,36 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
          * 开启百度定位
          */
         openBaiduLocation(con);
+
+        initImages(con);
+    }
+
+    private void initImages(Context context) {
+
+        map.put("第一个", urls[0]);
+        map.put("第二个", urls[1]);
+        map.put("第三个", urls[2]);
+        map.put("第四个", urls[3]);
+
+        for (String name : map.keySet()) {
+            final TextSliderView tsv = new TextSliderView(con);
+
+            //设置描述区域为不可见可以在xml不居中设置gone
+
+            tsv.image(map.get(name));
+            tsv.setScaleType(BaseSliderView.ScaleType.Fit);
+            tsv.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                @Override
+                public void onSliderClick(BaseSliderView slider) {
+                    Toast.makeText(con, tsv.getDescription(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            mSliderLayout.addSlider(tsv);
+            mSliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
+        }
+
+
     }
 
     private void openBaiduLocation(Context con) {

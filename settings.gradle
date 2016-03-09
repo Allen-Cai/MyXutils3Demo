@@ -1,1 +1,1 @@
-include ':xutils', ':sample', ':AVLoadingIndicatorView'
+include ':xutils', ':sample', ':AVLoadingIndicatorView',':ImageSliderLibrary'

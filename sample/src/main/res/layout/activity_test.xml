@@ -10,6 +10,52 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="点击加载" />
+
+    <RelativeLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/SliderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:indicator_visibility="visible" />
+
+        <!--<com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:visibility="gone" />-->
+
+        <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+            <!--android:id="@+id/custom_indicator"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:gravity="center"-->
+            <!--app:selected_color="#0095BF"-->
+            <!--app:selected_drawable="@drawable/bird"-->
+            <!--app:selected_height="6dp"-->
+            <!--app:selected_padding_left="5dp"-->
+            <!--app:selected_padding_right="5dp"-->
+            <!--app:selected_width="6dp"-->
+            <!--app:shape="oval"-->
+            <!--app:unselected_color="#55333333"-->
+            <!--app:unselected_height="6dp"-->
+            <!--app:unselected_padding_left="5dp"-->
+            <!--app:unselected_padding_right="5dp"-->
+            <!--app:unselected_width="6dp" />-->
+
+
+    </RelativeLayout>
+
     <!--显示区域-->
     <RelativeLayout
         android:id="@+id/relativelayout"
