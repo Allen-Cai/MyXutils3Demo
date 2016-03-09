@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_btn_cancleorder"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="1dp">
+
+    <TextView
+        android:id="@+id/mTV_listDialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/titleAndButton_background_color"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_silver" />
+
+    <ListView
+        android:id="@+id/mList_listDialog_Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
