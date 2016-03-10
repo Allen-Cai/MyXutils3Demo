@@ -3,6 +3,7 @@
     package="com.yhcdhp.cai">
 
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!--百度-->
     <!--百度定位-->
     <!-- 这个权限用于进行网络定位-->
