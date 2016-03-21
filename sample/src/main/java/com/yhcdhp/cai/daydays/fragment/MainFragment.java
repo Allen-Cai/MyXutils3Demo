@@ -22,6 +22,7 @@ import com.yhcdhp.cai.daydays.config.UMConstants;
 import com.yhcdhp.cai.daydays.entity.CityEntity;
 import com.yhcdhp.cai.daydays.utils.BaiduLocationUtils;
 import com.yhcdhp.cai.daydays.utils.Utils;
+import com.yhcdhp.cai.daydays.widget.diliver.DividerItemDecoration;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -90,6 +91,8 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
         super.onViewCreated(view, savedInstanceState);
         con = MainFragment.this.getActivity();
         mAdapter = new CityAdapter(con, citise);
+        //添加分割线
+        recyclerView.addItemDecoration(new DividerItemDecoration(con, LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(con));
         recyclerView.setAdapter(mAdapter);
         /**
