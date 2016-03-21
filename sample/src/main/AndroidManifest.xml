@@ -64,6 +64,19 @@
         <activity
             android:name=".daydays.MainTabActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--视频播放videoviewactivity-->
+        <activity
+            android:name=".daydays.PlayVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:label="视频"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+
+        </activity>
+
         <!--获取验证码的计时service-->
         <service android:name=".daydays.service.CodeService">
             <intent-filter>

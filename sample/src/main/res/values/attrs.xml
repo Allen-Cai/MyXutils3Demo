@@ -21,4 +21,27 @@
 
 
 
+
+    <declare-styleable name="YearView">
+        <attr name="year" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TimeLineView">
+        <attr name="startYear" format="integer" />
+        <attr name="centerYear" format="integer" />
+        <attr name="endYear" format="integer" />
+        <attr name="step" format="integer" />
+        <attr name="backgroundResources" format="reference"/>
+        <attr name="backgroundColor" format="color" />
+        <attr name="yearSize" format="dimension" />
+        <attr name="intervalWidth" format="integer" />
+        <attr name="useLines" format="boolean" />
+        <attr name="linesHeight" format="integer" />
+        <attr name="linesWidth" format="integer" />
+        <attr name="linesCount" format="integer" />
+        <attr name="yearColor" format="color" />
+        <attr name="linesColor" format="color" />
+        <attr name="typeface" format="integer" />
+    </declare-styleable>
+
 </resources>
