@@ -71,4 +71,5 @@ dependencies {
     compile project(':SliderLibrary')
     compile 'com.alibaba:fastjson:1.2.7'
     compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/libammsdk.jar')
 }

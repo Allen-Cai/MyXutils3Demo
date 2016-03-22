@@ -12,4 +12,8 @@ public class AppEnv {
      * 缓存模式
      */
     public static final boolean CACHE_MODE = true;
+
+
+    public static final String WEIXINAPPID = "wx9da1891c164acf28";
+
 }

@@ -107,6 +107,14 @@
         <!--umeng友盟-->
 
         <activity android:name=".daydays.aidl.Main" />
+
+
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>
