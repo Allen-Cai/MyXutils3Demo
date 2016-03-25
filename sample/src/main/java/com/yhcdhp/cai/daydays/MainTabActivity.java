@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UpdateStatus;
 import com.yhcdhp.cai.BaseActivity;
 import com.yhcdhp.cai.R;
 import com.yhcdhp.cai.daydays.config.UMConstants;
@@ -56,8 +57,17 @@ public class MainTabActivity extends BaseActivity implements FragmentTabHost.OnT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //任意网络环境都可以检测更新
-        UmengUpdateAgent.setUpdateOnlyWifi(false);
+//        UmengUpdateAgent.setUpdateOnlyWifi(false);
+//重置
+        UmengUpdateAgent.setDefault();
+        //设置更新样式，通知或者dialog
+        UmengUpdateAgent.setUpdateUIStyle(UpdateStatus.STYLE_NOTIFICATION);
+        //自动更新
         UmengUpdateAgent.update(this);
+        //手动更新
+//        UmengUpdateAgent.forceUpdate(this);
+        //静默更新
+//        UmengUpdateAgent.silentUpdate(this);
 
         initView();
 
