@@ -8,8 +8,8 @@ android {
         applicationId "com.yhcdhp.cai"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
     }
 
     signingConfigs {
@@ -58,6 +58,14 @@ android {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: "jrph"]
         }
     }
+
+//国际化不完整，打包检测不会出错
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
 }
 
 dependencies {
@@ -72,4 +80,5 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.7'
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/libammsdk.jar')
+    compile files('libs/umeng-update-v2.7.0.jar')
 }

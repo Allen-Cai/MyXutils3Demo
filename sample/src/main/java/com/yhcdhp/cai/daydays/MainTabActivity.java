@@ -9,6 +9,7 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.umeng.update.UmengUpdateAgent;
 import com.yhcdhp.cai.BaseActivity;
 import com.yhcdhp.cai.R;
 import com.yhcdhp.cai.daydays.config.UMConstants;
@@ -54,6 +55,9 @@ public class MainTabActivity extends BaseActivity implements FragmentTabHost.OnT
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //任意网络环境都可以检测更新
+        UmengUpdateAgent.setUpdateOnlyWifi(false);
+        UmengUpdateAgent.update(this);
 
         initView();
 
