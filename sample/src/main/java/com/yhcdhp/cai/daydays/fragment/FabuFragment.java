@@ -14,6 +14,7 @@ import com.yhcdhp.cai.BaseFragment;
 import com.yhcdhp.cai.R;
 import com.yhcdhp.cai.daydays.PlayVideoActivity;
 import com.yhcdhp.cai.daydays.view.TimeLineView;
+import com.yhcdhp.cai.daydays.widget.WaterWaveViewTwo;
 
 import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ContentView;
@@ -31,6 +32,8 @@ public class FabuFragment extends BaseFragment {
     private TextView tv_name;
     @ViewInject(R.id.timelineview)
     private TimeLineView timelineview;
+    @ViewInject(R.id.waterwave)
+    private WaterWaveViewTwo waterwave;
 
 
     private Activity activity;
@@ -76,6 +79,8 @@ public class FabuFragment extends BaseFragment {
                 return true;
             }
         });
+
+        waterwave.setTargetPoint(50);
 
 
     }

@@ -20,8 +20,6 @@
     </declare-styleable>
 
 
-
-
     <declare-styleable name="YearView">
         <attr name="year" format="dimension" />
     </declare-styleable>
@@ -31,7 +29,7 @@
         <attr name="centerYear" format="integer" />
         <attr name="endYear" format="integer" />
         <attr name="step" format="integer" />
-        <attr name="backgroundResources" format="reference"/>
+        <attr name="backgroundResources" format="reference" />
         <attr name="backgroundColor" format="color" />
         <attr name="yearSize" format="dimension" />
         <attr name="intervalWidth" format="integer" />
@@ -42,6 +40,14 @@
         <attr name="yearColor" format="color" />
         <attr name="linesColor" format="color" />
         <attr name="typeface" format="integer" />
+    </declare-styleable>
+
+
+    <!--水波纹-->
+    <declare-styleable name="WaterWaveViewTwo">
+
+        <attr name="water_color" format="color" />
+
     </declare-styleable>
 
 </resources>

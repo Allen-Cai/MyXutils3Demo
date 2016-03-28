@@ -21,4 +21,11 @@
         android:layout_height="50dp" />
 
 
+    <com.yhcdhp.cai.daydays.widget.WaterWaveViewTwo
+        android:id="@+id/waterwave"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:water_color="#ff0000" />
+
+
 </LinearLayout>
