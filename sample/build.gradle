@@ -81,4 +81,5 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/libammsdk.jar')
     compile files('libs/umeng-update-v2.7.0.jar')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 }

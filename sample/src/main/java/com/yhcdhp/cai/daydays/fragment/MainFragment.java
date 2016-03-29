@@ -11,6 +11,14 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.baidu.location.BDLocation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -35,9 +43,12 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by caishengyan on 2016/2/16.
@@ -150,6 +161,7 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
             case R.id.button1:
                 loading_layout.setVisibility(View.VISIBLE);
                 getData();
+//                getVolleyData();
                 break;
             default:
                 break;
@@ -157,9 +169,11 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
 
     }
 
+    private String url = "http://apis.baidu.com/apistore/weatherservice/citylist";
+
     public void getData() {
 
-        RequestParams params = new RequestParams("http://apis.baidu.com/apistore/weatherservice/citylist");
+        RequestParams params = new RequestParams(url);
         params.addHeader("apikey", "5ce6b537347a871dcebf6af0a1cf87c8");
         params.addBodyParameter("cityname", "北京");
         String url = params.getUri();
@@ -258,5 +272,80 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
     @Override
     public void updateLocation() {
 
+    }
+
+    public void getVolleyData() {
+        RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
+        StringBuffer sb = new StringBuffer(url);
+        sb.append("?cityname=");
+        try {
+            sb.append(URLEncoder.encode("北京", "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+//        url = url + "?cityname=%E6%9C%9D%E9%98%B3";
+        StringRequest request = new StringRequest(Request.Method.GET, sb.toString(), new Listener<String>() {
+
+            private String errNum;
+            private String errMsg;
+
+            @Override
+            public void onResponse(String response) {
+
+
+                try {
+                    Toast.makeText(con, "onSuccess=" + response.toString(), Toast.LENGTH_SHORT).show();
+                    JSONObject obj = new JSONObject(response);
+                    errNum = obj.getString("errNum");
+                    if (errNum.equals("-1")) {//失败
+                        errMsg = obj.getString("errMsg");
+                        button1.setText(errMsg);
+                        return;
+                    }
+                    if (errNum.equals("0")) {//成功
+                        loading_layout.setVisibility(View.GONE);
+                        errMsg = obj.getString("errMsg");
+                        LogUtil.d("apistore===" + "result=" + response);
+                        JSONArray array = obj.getJSONArray("retData");
+                        List<CityEntity> list = new ArrayList<CityEntity>();
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject entity = (JSONObject) array.get(i);
+                            //使用fastjson解析
+                            CityEntity city = JSON.parseObject(entity.toString(), CityEntity.class);
+
+//                            CityEntity city = new CityEntity();
+//                            city.setProvince_cn(entity.getString("province_cn"));
+//                            city.setDistrict_cn(entity.getString("district_cn"));
+//                            city.setName_cn(entity.getString("name_cn"));
+//                            city.setName_en(entity.getString("name_en"));
+//                            city.setArea_id(entity.getString("area_id"));
+                            list.add(city);
+                        }
+                        citise.addAll(list);
+                        mAdapter.notifyDataSetChanged();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(con, "JSONException", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(con, "onError=" + error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("apikey", "5ce6b537347a871dcebf6af0a1cf87c8");
+                return headers;
+
+            }
+        };
+
+        queue.add(request);
     }
 }
