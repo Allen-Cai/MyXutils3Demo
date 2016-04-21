@@ -264,10 +264,10 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
             LogUtil.i("locaAddtess = " + locaAddtess);
             button1.setText(locaAddtess);
         } else if (bdLocation.getLocType() == 62) {
-            Toast.makeText(con, "定位失败,请检查网络", Toast.LENGTH_SHORT).show();
+            Toast.makeText(con, "定位失败,请检查网络" + bdLocation.getLocType(), Toast.LENGTH_SHORT).show();
             mBaiduLocationUtils.stop();
         } else {
-            Toast.makeText(con, "定位失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(con, "定位失败" + bdLocation.getLocType(), Toast.LENGTH_SHORT).show();
             ;
             mBaiduLocationUtils.stop();
         }
