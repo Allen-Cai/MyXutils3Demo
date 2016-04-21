@@ -253,13 +253,18 @@ public class MainFragment extends BaseFragment implements BaiduLocationUtils.IMy
             return;
         LogUtil.i("bdLocation = " + bdLocation.toString());
         if (bdLocation.getLocType() == 161) {
+            mBaiduLocationUtils.setmIsLocationSuccess(true);
+            String locaAddtess = bdLocation.getCity();
+            // 设置地址显示,不显示“市”字；
+            if (locaAddtess != null && locaAddtess.contains("市")) {
+                locaAddtess = locaAddtess.replace("市", "");
+            }
 
             Utils.setUMengEvent(Utils.getAppContext(), UMConstants.LOCATION_SUCCESS);
 
             // 设置地址显示
             LogUtil.i("地址 = " + bdLocation.getAddrStr());
             mBaiduLocationUtils.stop();
-            String locaAddtess = bdLocation.getCity();
 
             LogUtil.i("locaAddtess = " + locaAddtess);
             button1.setText(locaAddtess);
